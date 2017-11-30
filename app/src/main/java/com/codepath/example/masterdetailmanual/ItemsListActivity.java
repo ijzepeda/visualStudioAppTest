@@ -19,9 +19,10 @@ public class ItemsListActivity extends FragmentActivity implements OnItemSelecte
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		AppCenter.start(getApplication(), "242a4008-f39a-4065-be0e-fcaf27f462a7",
+		AppCenter.start(getApplication(), String.valueOf(R.string.project_id_vsKe),
 				Analytics.class, Crashes.class);
-		AppCenter.start(getApplication(), "242a4008-f39a-4065-be0e-fcaf27f462a7", Push.class);
+		AppCenter.start(getApplication(), String.valueOf(R.string.project_id_vsKe), Push.class);
+//		AppCenter.start(getApplication(), "242a4008-f39a-4065-be0e-fcaf27f462a7", Push.class);
 		setContentView(R.layout.activity_items);
 		determinePaneLayout();
 	}
