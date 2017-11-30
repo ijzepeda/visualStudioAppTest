@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "690928532225",
+    "firebase_url": "https://visualstudiotest-ad189.firebaseio.com",
+    "project_id": "visualstudiotest-ad189",
+    "storage_bucket": "visualstudiotest-ad189.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690928532225:android:456be85c17f484aa",
+        "android_client_info": {
+          "package_name": "com.ijzepeda.masterdetail"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690928532225-dkcp343v6uhrv5hjr0f4infohf3simb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDknMD0zkeNnsr2Tzrqtc43RSszxfBsFJ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
