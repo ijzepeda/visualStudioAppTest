@@ -1,4 +1,4 @@
-package com.codepath.example.masterdetailmanual;
+package com.ijzepeda.masterdetailmanual;
 
 import java.io.Serializable;
 import java.util.ArrayList;

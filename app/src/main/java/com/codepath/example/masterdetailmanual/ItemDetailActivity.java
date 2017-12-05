@@ -1,4 +1,4 @@
-package com.codepath.example.masterdetailmanual;
+package com.ijzepeda.masterdetailmanual;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;

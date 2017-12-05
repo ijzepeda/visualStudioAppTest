@@ -1,6 +1,4 @@
-package com.codepath.example.masterdetailmanual;
-
-import java.util.ArrayList;
+package com.ijzepeda.masterdetailmanual;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class ItemsListFragment extends Fragment {
 	private ArrayAdapter<Item> adapterItems;
@@ -38,7 +38,7 @@ public class ItemsListFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// Create arraylist from item fixtures
-		ArrayList<Item> items = Item.getItems();
+		ArrayList<Item> items = com.ijzepeda.masterdetailmanual.Item.getItems();
 		adapterItems = new ArrayAdapter<Item>(getActivity(),
 				android.R.layout.simple_list_item_activated_1, items);
 	}

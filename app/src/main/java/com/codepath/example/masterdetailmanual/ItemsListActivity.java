@@ -1,4 +1,4 @@
-package com.codepath.example.masterdetailmanual;
+package com.ijzepeda.masterdetailmanual;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,6 @@ import android.widget.FrameLayout;
 
 import com.codepath.example.masterdetailmanual.ItemsListFragment.OnItemSelectedListener;
 import com.microsoft.appcenter.AppCenter;
-import com.microsoft.appcenter.analytics.Analytics;
-import com.microsoft.appcenter.crashes.Crashes;
 import com.microsoft.appcenter.push.Push;
 
 public class ItemsListActivity extends FragmentActivity implements OnItemSelectedListener {
@@ -19,10 +17,10 @@ public class ItemsListActivity extends FragmentActivity implements OnItemSelecte
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		AppCenter.start(getApplication(), String.valueOf(R.string.project_id_vsKe),
-				Analytics.class, Crashes.class);
-		AppCenter.start(getApplication(), String.valueOf(R.string.project_id_vsKe), Push.class);
-//		AppCenter.start(getApplication(), "242a4008-f39a-4065-be0e-fcaf27f462a7", Push.class);
+//		AppCenter.start(getApplication(), String.valueOf(R.string.project_id_vsKe),
+//				Analytics.class, Crashes.class);
+		AppCenter.start(getApplication(), String.valueOf(R.string.project_id_vsSofttek), Push.class);
+
 		setContentView(R.layout.activity_items);
 		determinePaneLayout();
 	}
@@ -31,8 +29,8 @@ public class ItemsListActivity extends FragmentActivity implements OnItemSelecte
 		FrameLayout fragmentItemDetail = (FrameLayout) findViewById(R.id.flDetailContainer);
 		if (fragmentItemDetail != null) {
 			isTwoPane = true;
-			ItemsListFragment fragmentItemsList = 
-					(ItemsListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentItemsList);
+			com.ijzepeda.masterdetailmanual.ItemsListFragment fragmentItemsList =
+					(com.ijzepeda.masterdetailmanual.ItemsListFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentItemsList);
 			fragmentItemsList.setActivateOnItemClick(true);
 		}
 	}
@@ -47,13 +45,13 @@ public class ItemsListActivity extends FragmentActivity implements OnItemSelecte
 	public void onItemSelected(Item item) {
 		if (isTwoPane) { // single activity with list and detail
 			// Replace frame layout with correct detail fragment
-			ItemDetailFragment fragmentItem = ItemDetailFragment.newInstance(item);
+			com.ijzepeda.masterdetailmanual.ItemDetailFragment fragmentItem = com.ijzepeda.masterdetailmanual.ItemDetailFragment.newInstance(item);
 			FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 			ft.replace(R.id.flDetailContainer, fragmentItem);
 			ft.commit();
 		} else { // separate activities
 			// launch detail activity using intent
-			Intent i = new Intent(this, ItemDetailActivity.class);
+			Intent i = new Intent(this, com.ijzepeda.masterdetailmanual.ItemDetailActivity.class);
 			i.putExtra("item", item);
 			startActivity(i);
 		}
